@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="./style.css">
+  <title></title>
+</head>
+
+<body>
+  <canvas></canvas>
+
+  <div class="panel">
+    <div class="buttons">
+      <div class="p1">
+        <span>Attempts</span>
+        <span class="loses">0</span>
+      </div>
+      <div class="p2">
+        <span>Score</span>
+        <span class="score">0</span>
+      </div>
+      <div class="p3">
+        <span>High Score</span>
+        <span class="maxScore">0</span>
+      </div>
+      <button id="startStopButton" onclick="startStopGame()">Start</button>
+      <button id="reset" onclick="reset()">reset</button>
+      <label for="playerColorInput">Player Color</label>
+      <input type="color" id="playerColorInput" value="#FF0000" onchange="updatePlayerColor()">
+
+      <label for="backgroundColorInput">Background Color</label>
+      <input type="color" id="backgroundColorInput" value="#FFFFFF" onchange="updateBackgroundColor()">
+
+      <label for="BallColorInput">Ball Color</label>
+      <input type="color" id="BallColorInput" value="#000000" onchange="updateBallColor()">
+
+
+      <label for="difficultySelect">Difficulty</label>
+      <select id="difficultySelect" onchange="updateDifficulty(this.value)">
+        <option value="30000">1</option>
+        <option value="27000">2</option>
+        <option value="24000">3</option>
+        <option value="21000">4</option>
+        <option value="18000">5</option>
+        <option value="15000">6</option>
+        <option value="12000">7</option>
+        <option value="9000">8</option>
+        <option value="6000">9</option>
+        <option value="3000">10</option>
+      </select>
+
+
+      <label for="backgroundSelect">Select Background Image:</label>
+      <select id="backgroundSelect" onchange="changeBackground()">
+        <option value="default"> none </option>
+        <option value="Image1.jpg">Graphic Sunset</option>
+        <option value="Image2.jpg">Night Sand</option>
+        <option value="Image3.jpg">Graphic Stars</option>
+        <option value="Image4.jpg">Fire Fall</option>
+        <option value="Image5.jpg">City Rain</option>
+        <option value="Image6.jpg">Geometric </option>
+        <option value="Image7.jpg">Sparkling Swamp</option>
+        <!-- Add more options as needed -->
+      </select>
+
+
+    </div>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+
+</html>

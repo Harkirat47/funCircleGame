@@ -284,7 +284,6 @@ function reset() {
             maxScore = score;
         }
         score = 0;
-        timeTillNext = 30000;
         ballMinSpeed = 2;
         ballMaxSpeed = 4;
         ballAmount = 1;
